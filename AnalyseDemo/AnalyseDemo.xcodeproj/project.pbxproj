@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		488FE4112112ABD400511337 /* MDJAnalyseClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDJAnalyseClick.h; sourceTree = "<group>"; };
 		488FE4122112ABD400511337 /* MDJAnalyseClick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDJAnalyseClick.m; sourceTree = "<group>"; };
+		488FE4142112E4D300511337 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		48E8D2A52111BB8900706295 /* AnalyseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalyseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E8D2A82111BB8900706295 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48E8D2A92111BB8900706295 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 				488FE4122112ABD400511337 /* MDJAnalyseClick.m */,
 				48E8D2CB2111BFC100706295 /* GlobalConfig.plist */,
 				48E8D2D32111C57200706295 /* MDJEventIDConstant.h */,
+				488FE4142112E4D300511337 /* README.md */,
 			);
 			name = Analyse;
 			path = ../../Analyse;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MDJAnalyseClick.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    DDYConfigInstance.ePolicy = DDYSend_Count;
+    [MDJAnalyseClick DDY_startWithConfigure:DDYConfigInstance];
     return YES;
 }
 

@@ -8,7 +8,6 @@
 
 #import "MDJHomeViewController.h"
 #import "MDJDetailViewController.h"
-#import "MDJUserStatistics.h"
 
 @interface MDJHomeViewController ()
 

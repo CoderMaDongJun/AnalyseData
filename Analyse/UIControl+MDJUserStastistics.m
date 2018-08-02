@@ -8,7 +8,7 @@
 
 #import "UIControl+MDJUserStastistics.h"
 #import "MDJHookUtility.h"
-#import "MDJUserStatistics.h"
+#import "MDJAnalyseClick.h"
 
 @implementation UIControl (MDJUserStastistics)
 
@@ -33,25 +33,17 @@
 
 - (void)performUserStastisticsAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
 {
-    //NSLog(@"\n***hook success.\n[1]action:%@\n[2]target:%@ \n[3]event:%@", NSStringFromSelector(action), target, event);
     NSString *eventID = nil;
     //只统计触摸结束时
     if ([[[event allTouches] anyObject] phase] == UITouchPhaseEnded) {
         NSString *actionString = NSStringFromSelector(action);
         NSString *targetName = NSStringFromClass([target class]);
-        NSDictionary *configDict = [self dictionaryFromUserStatisticsConfigPlist];
+        NSDictionary *configDict = DDYAdditionInstance.configurePlist;
         eventID = configDict[targetName][@"ControlEventIDs"][actionString];
     }
     if (eventID != nil) {
-        [MDJUserStatistics MDJ_sendEventToServer:eventID];
+        [MDJAnalyseClick DDY_event:eventID];
     }
-}
-
-- (NSDictionary *)dictionaryFromUserStatisticsConfigPlist
-{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MDJGlobalUserStatisticsConfig" ofType:@"plist"];
-    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:filePath];
-    return dic;
 }
 
 @end

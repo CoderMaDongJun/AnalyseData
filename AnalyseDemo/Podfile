@@ -1,0 +1,10 @@
+
+platform :ios, '8.0'
+
+target 'AnalyseDemo' do
+
+pod 'LKDBHelper', '~> 2.5.1'
+pod 'FMDB', '~> 2.7.2'
+
+end
+

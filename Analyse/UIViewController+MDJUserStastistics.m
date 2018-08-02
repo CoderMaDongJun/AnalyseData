@@ -8,7 +8,7 @@
 
 #import "UIViewController+MDJUserStastistics.h"
 #import "MDJHookUtility.h"
-#import "MDJUserStatistics.h"
+#import "MDJAnalyseClick.h"
 
 @implementation UIViewController (MDJUserStastistics)
 + (void)load {
@@ -46,31 +46,49 @@
 // 利用hook 统计所有页面的停留时长
 - (void)inject_viewWillAppear
 {
-    NSString *pageID = [self MDJ_pageEventID:YES];
-    if (pageID) {
-        [MDJUserStatistics MDJ_sendEventToServer:pageID];
+    BOOL timer = [self DDY_pageTimer];
+    BOOL EV = [self DDY_pageEV];
+    NSString *pageID = [self MDJ_pageEventID];
+    
+    // 是否需要计时
+    if (timer) {
+        [MDJAnalyseClick DDY_beginLogPageView:pageID];
+    }
+    
+    // 是否需要统计曝光
+    if (EV) {
+        [MDJAnalyseClick DDY_exposureFromPage:pageID];
     }
 }
 
 - (void)inject_viewWillDisappear
 {
-    NSString *pageID = [self MDJ_pageEventID:NO];
-    if (pageID) {
-        [MDJUserStatistics MDJ_sendEventToServer:pageID];
+    BOOL timer = [self DDY_pageTimer];
+    NSString *pageID = [self MDJ_pageEventID];
+    if (timer) {
+        [MDJAnalyseClick DDY_endLogPageView:pageID];
     }
 }
 
-- (NSString *)MDJ_pageEventID:(BOOL)bEnterPage
+- (BOOL)DDY_pageEV
 {
-    NSDictionary *configDict = [self MDJ_dictionaryFromUserStatisticsConfigPlist];
+    NSDictionary *configDict = DDYAdditionInstance.configurePlist;
     NSString *selfClassName = NSStringFromClass([self class]);
-    return configDict[selfClassName][@"PageEventIDs"][bEnterPage ? @"Enter" : @"Leave"];
+    return [configDict[selfClassName][@"PageIDs"][@"EV"] boolValue];
 }
 
-- (NSDictionary *)MDJ_dictionaryFromUserStatisticsConfigPlist
+- (BOOL)DDY_pageTimer
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MDJGlobalUserStatisticsConfig" ofType:@"plist"];
-    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:filePath];
-    return dic;
+    NSDictionary *configDict = DDYAdditionInstance.configurePlist;
+    NSString *selfClassName = NSStringFromClass([self class]);
+    return [configDict[selfClassName][@"PageIDs"][@"Timer"] boolValue];
 }
+
+- (NSString *)MDJ_pageEventID
+{
+    NSDictionary *configDict = DDYAdditionInstance.configurePlist;
+    NSString *selfClassName = NSStringFromClass([self class]);
+    return configDict[selfClassName][@"PageEventIDs"][@"PageId"];
+}
+
 @end

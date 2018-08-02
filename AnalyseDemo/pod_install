@@ -1,0 +1,10 @@
+#!/bin/sh
+cd `dirname $0`
+rm -rf $PWD/Pods
+rm $PWD/Podfile.lock
+
+POD=pod
+if [[ $1 != "" ]]; then
+    POD=$1
+fi
+$POD install --no-repo-update --verbose

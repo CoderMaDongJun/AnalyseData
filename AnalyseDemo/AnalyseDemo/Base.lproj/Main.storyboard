@@ -73,7 +73,7 @@
                     <navigationItem key="navigationItem" id="309-VM-WYN">
                         <barButtonItem key="rightBarButtonItem" title="NEXT" id="1a7-PC-sAT">
                             <connections>
-                                <action selector="onNextItemPressed:" destination="BYZ-38-t0r" id="Tdv-ez-4tU"/>
+                                <action selector="onNextItemPressed:" destination="BYZ-38-t0r" id="evb-7K-vWb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,6 +110,11 @@
                                     <action selector="onShareBtnPressed:" destination="i2g-H2-Vjj" eventType="touchUpInside" id="ed2-Ih-n2Y"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHn-e3-OgP">
+                                <rect key="frame" x="90" y="424" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29423558090000002" green="1" blue="0.081623660969999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -117,7 +122,9 @@
                             <constraint firstItem="5jL-Nf-03J" firstAttribute="centerX" secondItem="s5y-xt-nj3" secondAttribute="centerX" id="ye1-HN-ioy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FzJ-R2-KNN"/>
                     <connections>
+                        <outlet property="imgView" destination="WHn-e3-OgP" id="Qm5-bK-cK1"/>
                         <outlet property="shareBtn" destination="5jL-Nf-03J" id="tCH-MQ-pWm"/>
                     </connections>
                 </viewController>

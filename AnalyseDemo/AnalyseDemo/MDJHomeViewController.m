@@ -8,6 +8,7 @@
 
 #import "MDJHomeViewController.h"
 #import "MDJDetailViewController.h"
+#import "MDJTableViewController.h"
 
 @interface MDJHomeViewController ()
 
@@ -36,8 +37,9 @@
 
 - (IBAction)onNextItemPressed:(id)sender
 {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    MDJDetailViewController *secondVC = [sb instantiateViewControllerWithIdentifier:NSStringFromClass([MDJDetailViewController class])];
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    MDJDetailViewController *secondVC = [sb instantiateViewControllerWithIdentifier:NSStringFromClass([MDJDetailViewController class])];
+    MDJTableViewController *secondVC = [[MDJTableViewController alloc] init];
     [self.navigationController pushViewController:secondVC animated:YES];
 }
 

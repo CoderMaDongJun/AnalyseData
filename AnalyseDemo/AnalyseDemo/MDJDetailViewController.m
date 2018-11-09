@@ -10,9 +10,26 @@
 
 @interface MDJDetailViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *shareBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+
 @end
 
 @implementation MDJDetailViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(detailGesture:)];
+    [self.imgView addGestureRecognizer:tgr];
+    self.imgView.userInteractionEnabled = YES;
+}
+
+- (void)detailGesture:(id)tgr
+{
+    NSLog(@"tgr:%@",tgr);
+    
+}
 
 - (IBAction)onShareBtnPressed:(id)sender
 {

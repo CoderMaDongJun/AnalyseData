@@ -21,9 +21,7 @@
     });
 }
 
-
 #pragma mark - Method Swizzling
-
 - (void)swiz_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
 {
     //插入埋点代码
@@ -41,6 +39,7 @@
         NSDictionary *configDict = DDYAdditionInstance.configurePlist;
         eventID = configDict[targetName][@"ControlEventIDs"][actionString];
     }
+    
     if (eventID != nil) {
         [MDJAnalyseClick DDY_event:eventID];
     }

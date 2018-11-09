@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		488FE4132112ABD400511337 /* MDJAnalyseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 488FE4122112ABD400511337 /* MDJAnalyseClick.m */; };
+		48A75E4F216C7D6100719A57 /* MDJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A75E4E216C7D6100719A57 /* MDJTableViewController.m */; };
+		48A75E58216C8EBF00719A57 /* UITableView+MDJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A75E57216C8EBF00719A57 /* UITableView+MDJTableView.m */; };
 		48E8D2AA2111BB8900706295 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E8D2A92111BB8900706295 /* AppDelegate.m */; };
 		48E8D2B02111BB8900706295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E8D2AE2111BB8900706295 /* Main.storyboard */; };
 		48E8D2B22111BB8A00706295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E8D2B12111BB8A00706295 /* Assets.xcassets */; };
@@ -26,6 +28,10 @@
 		488FE4112112ABD400511337 /* MDJAnalyseClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDJAnalyseClick.h; sourceTree = "<group>"; };
 		488FE4122112ABD400511337 /* MDJAnalyseClick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDJAnalyseClick.m; sourceTree = "<group>"; };
 		488FE4142112E4D300511337 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		48A75E4D216C7D6000719A57 /* MDJTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDJTableViewController.h; sourceTree = "<group>"; };
+		48A75E4E216C7D6100719A57 /* MDJTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDJTableViewController.m; sourceTree = "<group>"; };
+		48A75E56216C8EBF00719A57 /* UITableView+MDJTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+MDJTableView.h"; sourceTree = "<group>"; };
+		48A75E57216C8EBF00719A57 /* UITableView+MDJTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MDJTableView.m"; sourceTree = "<group>"; };
 		48E8D2A52111BB8900706295 /* AnalyseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalyseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E8D2A82111BB8900706295 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48E8D2A92111BB8900706295 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 				48E8D2D52111C76B00706295 /* MDJHomeViewController.m */,
 				48E8D2D72111C78400706295 /* MDJDetailViewController.h */,
 				48E8D2D82111C78400706295 /* MDJDetailViewController.m */,
+				48A75E4D216C7D6000719A57 /* MDJTableViewController.h */,
+				48A75E4E216C7D6100719A57 /* MDJTableViewController.m */,
 				48E8D2AE2111BB8900706295 /* Main.storyboard */,
 				48E8D2B12111BB8A00706295 /* Assets.xcassets */,
 				48E8D2B32111BB8A00706295 /* LaunchScreen.storyboard */,
@@ -117,6 +125,8 @@
 				48E8D2C92111BE6800706295 /* UIViewController+MDJUserStastistics.m */,
 				48E8D2CD2111C02A00706295 /* UIControl+MDJUserStastistics.h */,
 				48E8D2CE2111C02A00706295 /* UIControl+MDJUserStastistics.m */,
+				48A75E56216C8EBF00719A57 /* UITableView+MDJTableView.h */,
+				48A75E57216C8EBF00719A57 /* UITableView+MDJTableView.m */,
 				488FE4112112ABD400511337 /* MDJAnalyseClick.h */,
 				488FE4122112ABD400511337 /* MDJAnalyseClick.m */,
 				48E8D2CB2111BFC100706295 /* GlobalConfig.plist */,
@@ -267,6 +277,8 @@
 				48E8D2C72111BD5700706295 /* MDJHookUtility.m in Sources */,
 				48E8D2CF2111C02A00706295 /* UIControl+MDJUserStastistics.m in Sources */,
 				48E8D2D62111C76B00706295 /* MDJHomeViewController.m in Sources */,
+				48A75E58216C8EBF00719A57 /* UITableView+MDJTableView.m in Sources */,
+				48A75E4F216C7D6100719A57 /* MDJTableViewController.m in Sources */,
 				48E8D2B82111BB8A00706295 /* main.m in Sources */,
 				48E8D2AA2111BB8900706295 /* AppDelegate.m in Sources */,
 				48E8D2D92111C78400706295 /* MDJDetailViewController.m in Sources */,
